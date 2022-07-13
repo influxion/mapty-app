@@ -92,6 +92,7 @@ class App {
     this._getLocalStorage();
 
     // Attach event handlers
+    // Event handlers binded to allow use for 'this'
     form.addEventListener('submit', this._newWorkout.bind(this));
     inputType.addEventListener('change', this._toggleElevationField.bind(this));
     formCancel.addEventListener(
@@ -390,4 +391,5 @@ class App {
   }
 }
 
+// Create and run application upon start.
 const app = new App();
